@@ -1,37 +1,39 @@
-
+// info에 저장되는 정보는 카드 하단의 정보 | 
+// 속성, 종족번호, 종족
 public class Info {
-	String property;
+	int cardNo;
+	String name;
 	String tribe;
-	int tribeNo;
 	
-	Info(String property, String tribe, int tribeNo) {
-		this.property = property;
+	public Info(int cardNo, String name, String tribe) {
+		super();
+		this.cardNo = cardNo;
+		this.name = name;
 		this.tribe = tribe;
-		this.tribeNo = tribeNo;
 	}
 	
 	public String toString() {
-		return "Property = " + property +
-				", Tribe = " + tribe + ", TribeNo = " + tribeNo;
+		return "CardNo = " + cardNo + ", name = " + name +
+				", tribe = " + tribe;
 	}
-
-	public String getProperty() {
-		return property;
+	
+	public int getCardNo() {
+		return cardNo;
+	}
+	public String getName() {
+		return name;
 	}
 	public String getTribe() {
 		return tribe;
 	}
-	public int tribeNo() {
-		return tribeNo;
-	}
 	
-	public void setProperty(String property) {
-		this.property = property;
+	public void setCardNo(int cardNo) {
+		this.cardNo = cardNo;
 	}
-	public void setTribe(String tribe) {
+	public void setTribeNo(String tribe) {
 		this.tribe = tribe;
 	}
-	public void setTribeNo(int tribeNo) {
-		this.tribeNo = tribeNo;
+	public void setCardCnt(String name) {
+		this.name = name;
 	}
 }

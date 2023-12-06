@@ -1,56 +1,49 @@
-// 유희왕 카드 정보 : 이름, 속성, 레벨, 종족, (효과), 공격력, 방어력
-
+// 유희왕 카드 정보 : 이름, 속성, 레벨, 종족, (효과), 공격력, 방어력, 종류
+// card에 저장되는 정보는 카드 상단의 정보 | 
+// 카드 번호, 이름, 레벨, 속성 
+// cardNo로 Info로 이어짐
 public class Card {
+	int cardNo;
 	String name;
 	int level;
-	int tribeNo;
-	int attack;
-	int defense;
+	String property;
 	
-	public Card(String name, int level, int tribeNo, int attack, int defense) {
+	public Card(int cardNo, String name, int level, String property) {
 		super();
+		this.cardNo = cardNo;
 		this.name = name;
 		this.level = level;
-		this.tribeNo = tribeNo;
-		this.attack = attack;
-		this.defense = defense;
+		this.property = property;
 	}
 	
 	public String toString() {
-		return "Name = " + name + ", level = " + level + 
-				", tribe = " + tribeNo + ", attack = " + attack + 
-				", defense = " + defense;
+		return 	"CardNo. = " + cardNo + ", Name = " + name + 
+				", level = " + level;
 	}
 	
+	public int getCardNo() {
+		return cardNo;
+	}
 	public String getName() {
 		return name;
 	}
 	public int getLevel() {
 		return level;
 	}
-	public int getTribe() {
-		return tribeNo;
-	}
-	public int getAttack() {
-		return attack;
-	}
-	public int getDefense() {
-		return defense;
+	public String getProperty() {
+		return property;
 	}
 	
+	public void setCardNo(int num) {
+		this.cardNo = num;
+	}
 	public void setName(String name) {
 		this.name = name;
 	}
 	public void setLevel(int level) {
 		this.level = level;
 	}
-	public void setTribe(int tribeNo) {
-		this.tribeNo = tribeNo;
-	}
-	public void setAttack(int attack) {
-		this.attack = attack;
-	}
-	public void setDefense(int defense) {
-		this.defense = defense;
+	public void setProperty(String property) {
+		this.property = property;
 	}
 }
