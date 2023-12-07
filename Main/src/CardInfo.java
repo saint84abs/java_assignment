@@ -1,33 +1,38 @@
 // cardNo에 맞춰서 name이랑 tribe 출력용도
 // 징검다리의 역할
 public class CardInfo {
+	int cardNo;
 	String tribe;
-	int attack;
-	int defense;
+	String name;
 	
-	public CardInfo(String tribe, int attack, int defense) {
+	public CardInfo(int cardNo, String name, String tribe) {
+		this.cardNo = cardNo;
 		this.tribe = tribe;
-		this.attack = attack;
-		this.defense = defense;
+		this.name = name;
+	}
+	
+	public String toString() {
+		return "CardNo." + cardNo + ", Tribe = " + tribe +
+				", Name = " + name;
 	}
 	
 	public String getTribe() {
 		return tribe;
 	}
-	public int getAttack() {
-		return attack;
+	public String getName() {
+		return name;
 	}
-	public int getDefense() {
-		return defense;
+	public int getCardNo() {
+		return cardNo;
 	}
 
 	public void setTribe(String tribe) {
 		this.tribe = tribe;
 	}
-	public void setAttack(int attack) {
-		this.attack = attack;
+	public void setAttack(String name) {
+		this.name = name;
 	}
-	public void setDefense(int defense) {
-		this.defense = defense;
+	public void setDefense(int cardNo) {
+		this.cardNo = cardNo;
 	}
 }

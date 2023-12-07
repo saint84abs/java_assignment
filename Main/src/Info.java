@@ -3,28 +3,31 @@
 // cardNo로 card에서 이어짐
 public class Info {
 	int cardNo;
+	String tribe;
 	int attack;
 	int defense;
-	String tribe;
 	
-	public Info(int cardNo, int attack, int defense, String tribe) {
+	public Info(int cardNo, String tribe, int attack, int defense) {
 		super();
 		this.cardNo = cardNo;
+		this.tribe = tribe;
 		this.attack = attack;
 		this.defense = defense;
-		this.tribe = tribe;
 	}
 	
 	public String toString() {
-		return "CardNo = " + cardNo + ", name = " + name +
-				", tribe = " + tribe;
+		return "CardNo." + cardNo + ", tribe = " + tribe + 
+				", attack = " + attack + ", defense = " + defense;
 	}
 	
 	public int getCardNo() {
 		return cardNo;
 	}
-	public String getName() {
-		return name;
+	public int getAttack() {
+		return attack;
+	}
+	public int getDefense() {
+		return defense;
 	}
 	public String getTribe() {
 		return tribe;
@@ -37,6 +40,6 @@ public class Info {
 		this.tribe = tribe;
 	}
 	public void setCardCnt(String name) {
-		this.name = name;
+		this.attack = attack;
 	}
 }

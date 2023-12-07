@@ -18,8 +18,8 @@ public class Card {
 	}
 	
 	public String toString() {
-		return 	"CardNo. = " + cardNo + ", Name = " + name + 
-				", level = " + level;
+		return 	"CardNo." + cardNo + ", Name = " + name + 
+				", level = " + level + ", property = " + property;
 	}
 	
 	public int getCardNo() {
