@@ -2,6 +2,7 @@
 // card에 저장되는 정보는 카드 상단의 정보 | 
 // 카드 번호, 이름, 레벨, 속성 
 // cardNo로 Info로 이어짐
+// tribe로 
 public class Card {
 	int cardNo;
 	String name;

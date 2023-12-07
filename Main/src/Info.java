@@ -1,14 +1,17 @@
 // info에 저장되는 정보는 카드 하단의 정보 | 
 // 속성, 종족번호, 종족
+// cardNo로 card에서 이어짐
 public class Info {
 	int cardNo;
-	String name;
+	int attack;
+	int defense;
 	String tribe;
 	
-	public Info(int cardNo, String name, String tribe) {
+	public Info(int cardNo, int attack, int defense, String tribe) {
 		super();
 		this.cardNo = cardNo;
-		this.name = name;
+		this.attack = attack;
+		this.defense = defense;
 		this.tribe = tribe;
 	}
 	
