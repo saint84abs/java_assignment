@@ -12,8 +12,8 @@ public class CardInfo {
 	}
 	
 	public String toString() {
-		return "CardNo." + cardNo + ", Tribe = " + tribe +
-				", Name = " + name;
+		return "CardNo." + cardNo + ", Name = " + name +
+				", Tribe = " + tribe;
 	}
 	
 	public String getTribe() {

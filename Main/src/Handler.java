@@ -36,9 +36,9 @@ public class Handler {
 	// 카드의 이름과 종족을 카드번호와 함께 리턴
 	public Vector<CardInfo> getAllCardNameWithTribe() {
 		for (int i = 0; i < cards.size(); i++) {
-			Card cd = cards.get(i);
+			Card cd = (Card)cards.get(i);
 			for (int j = 0; j < info.size(); j++) {
-				Info inf = info.get(i);
+				Info inf = (Info)info.get(j);
 				if (cd.cardNo == inf.cardNo)
 					cardInfo.add(new CardInfo(cd.cardNo, cd.name, inf.tribe));
 			}
@@ -46,33 +46,19 @@ public class Handler {
 		return cardInfo;
 	}
 	
-	public Vector<Info> getInfoOfCard(String name) {
-		boolean found = false;
-		
+	// 원하는 카드의 이름을 입력하면 그 카드의 이름과 종족을 리턴
+	public Vector<CardInfo> getInfoOfCard(String name) {
 		for (int i = 0; i < cards.size(); i++) {
-			found = false;
 			Card cd = cards.get(i);
 			for (int j = 0; j < info.size(); j++) {
-				Info inf = info.get(i);
-				
+				Info inf = info.get(j);
+				if (cd.name == name && cd.cardNo == inf.cardNo) {
+					cardInfo.add(new CardInfo(cd.cardNo, cd.name, inf.tribe));
+				}
 			}
 		}
-		
-		return info;
+		return cardInfo;
 	}
-	
-	
-	
-	
-	
-	public int isMax(int A, int B) {
-		return A > B ? A : B;
-	}
-	
-	public int isMin(int A, int B) {
-		return A < B ? A : B;
-	}
-	
 }
 
 

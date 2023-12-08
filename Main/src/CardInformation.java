@@ -3,13 +3,12 @@ import java.util.Vector;
 public class CardInformation {
 	String card[][] = {
 			{"1", "블랙 매지션", "8", "어둠"},
-			{"2", "푸른 눈의 백룡", "8", "빛"},
-			{"3", "블랙 매지션 걸", "5", "어둠"}
+			{"3", "블랙 매지션 걸", "5", "어둠"},
+			{"2", "푸른 눈의 백룡", "8", "빛"}
 	};
 	String info[][] = {
 			{"2", "드래곤족", "3000", "2500"},
 			{"1", "마법사족", "2500", "2000"},
-			
 			{"3", "마법사족", "1800", "1500"}
 	};
 	
@@ -31,12 +30,13 @@ public class CardInformation {
 		Vector<Info> inf = MyHandler.getAllInfo();
 		printVectorContents("getAllInfo", inf);
 		
-		// 왜 3번 출력되지?
 		Vector<CardInfo> cdinf = MyHandler.getAllCardNameWithTribe();
 		printVectorContents("getAllCardNameWithTribe", cdinf);
+
+		cdinf.removeAllElements();
+		cdinf = MyHandler.getInfoOfCard("블랙 매지션");
+		printVectorContents("getInfoOfCard", cdinf);
 	}
-	
-	
 	
 	public static void main(String args[]) {
 		new CardInformation();
